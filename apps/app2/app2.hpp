@@ -1,6 +1,6 @@
 #ifndef APP2_HPP
 #define APP2_HPP
 
-extern int app_x;
+extern const char *bar;
 
 #endif //APP2_HPP

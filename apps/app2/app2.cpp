@@ -1,4 +1,4 @@
 #include <iostream>
 #include "app2.hpp"
 
-int app_x = 2;
+const char *bar = "Hello! from app1.";

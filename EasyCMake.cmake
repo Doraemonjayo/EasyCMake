@@ -1,3 +1,12 @@
+function(is_empty result)
+    list(LENGTH ARGN len)
+    if(len EQUAL 0)
+        set(${result} TRUE PARENT_SCOPE)
+    else()
+        set(${result} FALSE PARENT_SCOPE)
+    endif()
+endfunction()
+
 function(find_source_files result)
     set(src_files "")
     foreach(directory IN LISTS ARGN)
