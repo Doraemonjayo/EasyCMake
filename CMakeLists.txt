@@ -16,7 +16,6 @@ include(EasyCMake.cmake)
 # 全実行可能ファイルで共有するソースファイル及びインクルードパスを設定
 set(MODULES_DIRECTORIES "${CMAKE_SOURCE_DIR}/modules")
 find_source_files(MODULES_SOURCE_FILES ${MODULES_DIRECTORIES})
-find_cmake_files(MODULES_CMAKE_FILES ${MODULES_DIRECTORIES})
 
 # 各実行可能ファイルと関連のソースファイル及びインクルードパスを設定
 set(APPS_DIRECTORIES "${CMAKE_SOURCE_DIR}/apps")
