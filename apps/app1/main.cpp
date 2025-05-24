@@ -4,7 +4,7 @@
 
 int main(int argc, char const *argv[])
 {
-    std::cout << foo << std::endl;
-    std::cout << bar << std::endl;
+    app_message();
+    module1_message();
     return 0;
 }

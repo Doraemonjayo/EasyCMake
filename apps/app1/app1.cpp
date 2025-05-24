@@ -1,4 +1,6 @@
 #include <iostream>
 #include "app1.hpp"
 
-const char *bar = "Hello! from app1.";
+void app_message() {
+    std::cout << "Hello! from app1." << std::endl;
+}
