@@ -1,4 +1,4 @@
-target_link_package(${target} PACKAGE_LIST
+link_package(
     Python3
     COMPONENTS Interpreter Development
     DIRECTORIES "\${Python3_INCLUDE_DIRS}"

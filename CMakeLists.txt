@@ -18,20 +18,14 @@ set(MODULES_DIRECTORIES "${CMAKE_SOURCE_DIR}/modules")
 find_source_files(MODULES_SOURCE_FILES ${MODULES_DIRECTORIES})
 find_pkglinkers(MODULES_PKGLINKERS ${MODULES_DIRECTORIES})
 
-set(target MODULES)
-foreach(pkglinker ${MODULES_PKGLINKERS})
-    include(${pkglinker})
-endforeach()
+include_pkglinkers(MODULES PACKAGE_LIST ${MODULES_PKGLINKERS})
 
 # 各実行可能ファイルと関連のソースファイル及びインクルードパスを設定
 set(APPS_DIRECTORIES "${CMAKE_SOURCE_DIR}/apps")
 find_apps(${PROJECT_NAME}_APPS ${APPS_DIRECTORIES})
 
 foreach(app ${${PROJECT_NAME}_APPS})
-    set(target ${app})
-    foreach(pkglinker ${${app}_PKGLINKERS})
-        include(${pkglinker})
-    endforeach()
+    include_pkglinkers(${app} PACKAGE_LIST ${${app}_PKGLINKERS})
 endforeach()
 
 find_packages(${PACKAGE_LIST})
