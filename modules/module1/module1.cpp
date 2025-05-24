@@ -1,3 +1,6 @@
+#include <iostream>
 #include "module1/module1.hpp"
 
-const char *foo = "Hello! from module1.";
+void module1_message() {
+    std::cout << "Hello! from module1." << std::endl;
+}

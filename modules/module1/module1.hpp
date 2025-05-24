@@ -1,6 +1,6 @@
 #ifndef MODULE1_HPP
 #define MODULE1_HPP
 
-extern const char *foo;
+void module1_message();
 
 #endif //MODULE1_HPP
